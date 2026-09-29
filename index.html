@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Personal - Simón Millanguir</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Simón Millanguir Zambrano</h1>
+            <p>Estudiante de Ingeniería Civil en Informática</p>
+        </div>
+        <nav class="nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#trabajos-del-semestre">Trabajos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section id="sobre-mi" class="section sobre-mi">
+            <h2>Sobre mí</h2>
+            <div class="sobre-mi-contenido">
+                <img src="images/perfil.jpg" alt="Fotografía de perfil de Simón Millanguir" class="img-perfil">
+                <p>Soy estudiante de la Universidad Católica de Temuco y me especializo en desarrollo frontend. Busco satisfacer las necesidades del usuario creando el diseño más óptimo y con la mejor experiencia visual según cada cliente y sus criterios, siempre optimizando la estructura, la funcionalidad y el diseño.</p>
+            </div>
+        </section>
+
+        <section id="trabajos-del-semestre" class="section trabajos">
+            <h2>Trabajos del Semestre</h2>
+            <div class="grid-trabajos">
+                <article class="card-trabajos">
+                    <h3>Trabajo 1: Lectura - La Fábula del Diseñador Centrado en el Usuario</h3>
+                    <img src="images/fabula-disenador.jpg" alt="Portada o ilustración de La Fábula del Diseñador Centrado en el Usuario" class="img-trabajo">
+                    <p>Lectura sobre el libro "La Fábula del Diseñador Centrado en el Usuario", enfocado en comprender mejor el rol del desarrollador Frontend y la experiencia de usuario.</p>
+                    <span class="badge">UX / Investigación</span>
+                </article>
+
+                <article class="card-trabajos">
+                    <h3>Trabajo 2: Simon's Store — Tienda Web</h3>
+                    <p>Desarrollo de un sitio e-commerce de muebles utilizando Flexbox para tarjetas de productos destacados y CSS Grid para la maquetación del catálogo.</p>
+    
+                 <div class="badges">
+                 <span class="badge">HTML5</span>
+                <span class="badge">CSS Grid & Flexbox</span>
+               </div>
+                <a href="simons-store/simons-store.html" class="btn-proyecto" target="_blank">Ver Proyecto</a>
+               </article>
+
+                <article class="card-trabajos">
+                    <h3>Trabajo 3: Portafolio Personal Web</h3>
+                    <p>Prototipo de interfaz profesional con altos estándares de accesibilidad WCAG y maquetación semántica.</p>
+                    <span class="badge">Proyecto P2</span>
+                </article>
+            </div>
+        </section>
+
+        
+        <section id="contacto" class="section contacto">
+            <h2>Contacto</h2>
+            <form action="#" method="post" class="form-contacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. Pedro Pepe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required placeholder="pedropepe@correo.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Simón Millanguir - Escuela de Ingeniería Civil en Informática (UCT)</p>
+    </footer>
+
+</body>
+</html>
