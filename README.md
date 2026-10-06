@@ -33,4 +33,4 @@ Decisiones de Diseño
 Cómo Descargar desde GitHub
 
 1. **Abrir el Repositorio desde Github, y descargarlo en archivo zip.**
-2. **Abri el archivo en Visual Estudio.**
+2. **Abrir el archivo en Visual Estudio.**
