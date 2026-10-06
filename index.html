@@ -26,7 +26,7 @@
             <h2>Sobre mí</h2>
             <div class="sobre-mi-contenido">
                 <img src="images/perfil.jpg" alt="Fotografía de perfil de Simón Millanguir" class="img-perfil">
-                <p>Soy estudiante de la Universidad Católica de Temuco y me especializo en desarrollo frontend. Busco satisfacer las necesidades del usuario creando el diseño más óptimo y con la mejor experiencia visual según cada cliente y sus criterios, siempre optimizando la estructura, la funcionalidad y el diseño.</p>
+                <p>Soy estudiante de la Universidad Católica de Temuco y me estoy contruyendo en desarrollo frontend. Busco satisfacer las necesidades del usuario creando el diseño más óptimo y con la mejor experiencia visual según cada cliente y sus criterios, siempre optimizando la estructura, la funcionalidad y el diseño.</p>
             </div>
         </section>
 
@@ -44,11 +44,11 @@
                     <h3>Trabajo 2: Simon's Store — Tienda Web</h3>
                     <p>Desarrollo de un sitio e-commerce de muebles utilizando Flexbox para tarjetas de productos destacados y CSS Grid para la maquetación del catálogo.</p>
     
-                 <div class="badges">
-                 <span class="badge">HTML5</span>
-                <span class="badge">CSS Grid & Flexbox</span>
-               </div>
-                <a href="simons-store/simons-store.html" class="btn-proyecto" target="_blank">Ver Proyecto</a>
+                    <div class="badges">
+                        <span class="badge">HTML5</span>
+                        <span class="badge">CSS Grid & Flexbox</span>
+                    </div>
+                    <a href="simons-store/simons-store.html" class="btn-proyecto" target="_blank">Ver Proyecto</a>
                </article>
 
                 <article class="card-trabajos">
@@ -59,10 +59,10 @@
             </div>
         </section>
 
-        
         <section id="contacto" class="section contacto">
             <h2>Contacto</h2>
-            <form action="#" method="post" class="form-contacto">
+            
+            <form id="formContacto" class="form-contacto">
                 <div class="form-group">
                     <label for="nombre">Nombre completo:</label>
                     <input type="text" id="nombre" name="nombre" required placeholder="Ej. Pedro Pepe">
@@ -84,8 +84,29 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 Simón Millanguir - Ingeniería Civil en Informática (UCT)</p>
+        <p>&copy; 2026 Simón Millanguir - Escuela de Ingeniería Civil en Informática (UCT)</p>
     </footer>
 
+    <script>
+        document.getElementById('formContacto').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+           
+            const miCorreo = "smillanguir2026@alu.uct.cl"; 
+
+            const nombre = document.getElementById('nombre').value;
+            const emailRemitente = document.getElementById('email').value;
+            const mensajeOriginal = document.getElementById('mensaje').value;
+
+            const asunto = encodeURIComponent(`Nuevo mensaje de contacto de ${nombre}`);
+            const cuerpo = encodeURIComponent(`De: ${nombre} (${emailRemitente})\n\nMensaje:\n${mensajeOriginal}`);
+
+            
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${miCorreo}&su=${asunto}&body=${cuerpo}`;
+
+          
+            window.open(gmailUrl, '_blank');
+        });
+    </script>
 </body>
 </html>
