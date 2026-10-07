@@ -34,3 +34,19 @@ Cómo Descargar desde GitHub
 
 1. **Abrir el Repositorio desde Github, y descargarlo en archivo zip.**
 2. **Abrir el archivo en Visual Estudio.**
+
+
+________________________________________________________
+                    USO DE IA
+________________________________________________________
+
+En este proyecto se utilizó Inteligencia Artificial (IA) como asistente de desarrollo para los siguientes apartados:
+
+1. **Integración del Formulario de Contacto (Gmail):**
+   - Asistencia en la lógica de JavaScript para capturar los datos del formulario y redireccionar dinámicamente a la interfaz de composición de Gmail, garantizando que el mensaje sea dirigido correctamente al correo del autor (`smillanguir2026@alu.uct.cl`).
+
+2. **Diseño y Estilos CSS (`css/style.css`):**
+   - Apoyo en la maquetación y reglas CSS para el diseño responsivo (*media queries*), estructuración mediante Flexbox (alineación de imagen y texto en la sección "Sobre mí") y mejora de la jerarquía visual de las tarjetas de proyectos.
+
+3. **Documentación (`README.md`):**
+   - Soporte en la organización, estructuración y redacción del texto explicativo del proyecto para la evaluación.
