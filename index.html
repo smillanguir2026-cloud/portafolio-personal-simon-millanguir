@@ -8,10 +8,11 @@
 </head>
 <body>
     <header class="header">
-        <div class="logo">
+        <hgroup class="logo">
             <h1>Simón Millanguir Zambrano</h1>
             <p>Estudiante de Ingeniería Civil en Informática</p>
-        </div>
+        </hgroup>
+        
         <nav class="nav" aria-label="Navegación principal">
             <ul>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -23,38 +24,42 @@
 
     <main>
         <section id="sobre-mi" class="section sobre-mi">
-            <h2>Sobre mí</h2>
-            <div class="sobre-mi-contenido">
-                <img src="images/perfil.jpg" alt="Fotografía de perfil de Simón Millanguir" class="img-perfil">
-                <p>Soy estudiante de la Universidad Católica de Temuco y me estoy contruyendo en desarrollo frontend. Busco satisfacer las necesidades del usuario creando el diseño más óptimo y con la mejor experiencia visual según cada cliente y sus criterios, siempre optimizando la estructura, la funcionalidad y el diseño.</p>
-            </div>
+             <h2>Sobre mí</h2>
+         <div class="sobre-mi-contenido">
+            <img src="images/perfil.jpg" alt="Fotografía de perfil de Simón Millanguir" class="img-perfil">
+            <p>Soy estudiante de la Universidad Católica de Temuco y me estoy construyendo en desarrollo frontend. Busco satisfacer las necesidades del usuario creando el diseño más óptimo y con la mejor experiencia visual según cada cliente y sus criterios, siempre optimizando la estructura, la funcionalidad y el diseño.</p>
+         </div>
         </section>
 
         <section id="trabajos-del-semestre" class="section trabajos">
             <h2>Trabajos del Semestre</h2>
+            
             <div class="grid-trabajos">
                 <article class="card-trabajos">
                     <h3>Trabajo 1: Lectura - La Fábula del Diseñador Centrado en el Usuario</h3>
                     <img src="images/fabula-disenador.jpg" alt="Portada o ilustración de La Fábula del Diseñador Centrado en el Usuario" class="img-trabajo">
                     <p>Lectura sobre el libro "La Fábula del Diseñador Centrado en el Usuario", enfocado en comprender mejor el rol del desarrollador Frontend y la experiencia de usuario.</p>
-                    <span class="badge">UX / Investigación</span>
+                    <ul class="badges" aria-label="Etiquetas del proyecto">
+                        <li class="badge">UX / Investigación</li>
+                    </ul>
                 </article>
 
                 <article class="card-trabajos">
                     <h3>Trabajo 2: Simon's Store — Tienda Web</h3>
                     <p>Desarrollo de un sitio e-commerce de muebles utilizando Flexbox para tarjetas de productos destacados y CSS Grid para la maquetación del catálogo.</p>
-    
-                    <div class="badges">
-                        <span class="badge">HTML5</span>
-                        <span class="badge">CSS Grid & Flexbox</span>
-                    </div>
-                    <a href="simons-store/simons-store.html" class="btn-proyecto" target="_blank">Ver Proyecto</a>
-               </article>
+                    <ul class="badges" aria-label="Tecnologías utilizadas">
+                        <li class="badge">HTML5</li>
+                        <li class="badge">CSS Grid & Flexbox</li>
+                    </ul>
+                    <a href="simons-store/simons-store.html" class="btn-proyecto" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+                </article>
 
                 <article class="card-trabajos">
                     <h3>Trabajo 3: Portafolio Personal Web</h3>
                     <p>Prototipo de interfaz profesional con altos estándares de accesibilidad WCAG y maquetación semántica.</p>
-                    <span class="badge">Proyecto P2</span>
+                    <ul class="badges" aria-label="Etiquetas del proyecto">
+                        <li class="badge">Proyecto P2</li>
+                    </ul>
                 </article>
             </div>
         </section>
@@ -63,20 +68,20 @@
             <h2>Contacto</h2>
             
             <form id="formContacto" class="form-contacto">
-                <div class="form-group">
+                <p class="form-group">
                     <label for="nombre">Nombre completo:</label>
                     <input type="text" id="nombre" name="nombre" required placeholder="Ej. Agustin Emilio">
-                </div>
+                </p>
 
-                <div class="form-group">
+                <p class="form-group">
                     <label for="email">Correo electrónico:</label>
                     <input type="email" id="email" name="email" required placeholder="aemilio@correo.com">
-                </div>
+                </p>
 
-                <div class="form-group">
+                <p class="form-group">
                     <label for="mensaje">Mensaje:</label>
                     <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
-                </div>
+                </p>
 
                 <button type="submit" class="btn-submit">Enviar mensaje</button>
             </form>
@@ -84,16 +89,14 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 Simón Millanguir - Universidad de Ingeniería Civil en Informática (UCT)</p>
+        <p>&copy; 2026 Simón Millanguir - Escuela de Ingeniería Civil en Informática (UCT)</p>
     </footer>
 
     <script>
         document.getElementById('formContacto').addEventListener('submit', function(event) {
             event.preventDefault(); 
             
-           
             const miCorreo = "smillanguir2026@alu.uct.cl"; 
-
             const nombre = document.getElementById('nombre').value;
             const emailRemitente = document.getElementById('email').value;
             const mensajeOriginal = document.getElementById('mensaje').value;
@@ -101,11 +104,9 @@
             const asunto = encodeURIComponent(`Nuevo mensaje de contacto de ${nombre}`);
             const cuerpo = encodeURIComponent(`De: ${nombre} (${emailRemitente})\n\nMensaje:\n${mensajeOriginal}`);
 
-            
             const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${miCorreo}&su=${asunto}&body=${cuerpo}`;
 
-          
-            window.open(gmailUrl, '_blank');
+            window.open(gmailUrl, '_blank', 'noopener,noreferrer');
         });
     </script>
 </body>
